@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fetch WhatsApp profile pictures instantly by entering a phone number. Join our WhatsApp and Telegram channels for updates!">
+    <meta name="keywords" content="WhatsApp profile picture, phone number lookup, WhatsApp DP fetcher, Shadow Innovations">
+    <meta name="author" content="Shadow Innovations">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph Tags for Social Media -->
+    <meta property="og:title" content="WhatsApp Profile Picture Fetcher">
+    <meta property="og:description" content="Enter a phone number to view the associated WhatsApp profile picture instantly.">
+    <meta property="og:image" content="https://yourwebsite.com/images/preview.jpg">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta property="og:type" content="website">
+    <title>WhatsApp Profile Picture Fetcher</title>
+    <script src="js/asset_3fa48481346f97169a6a4f378ed15e78"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6, #93c5fd);
+            background-attachment: fixed;
+        }
+        .form-container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
+        }
+        .form-container:hover {
+            transform: translateY(-5px);
+        }
+        .btn-whatsapp, .btn-telegram, .btn-submit, .btn-download {
+            transition: all 0.3s ease;
+        }
+        .btn-whatsapp:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4);
+        }
+        .btn-telegram:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+        }
+        .btn-download:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+        }
+        .btn-submit:disabled, .btn-download:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        .input-field {
+            transition: all 0.3s ease;
+        }
+        .input-field:focus {
+            box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+        }
+        .error-message {
+            display: none;
+            color: #ef4444;
+            font-size: 0.875rem;
+        }
+        .error-message.show {
+            display: block;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen text-gray-800">
+    <header class="bg-blue-900 text-white py-8">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">WhatsApp Profile Picture Fetcher</h1>
+            <p class="mt-3 text-lg md:text-xl text-blue-200">Instantly view WhatsApp profile pictures by entering a phone number</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto py-12 flex-grow">
+        <div class="form-container max-w-lg mx-auto p-8 rounded-2xl shadow-2xl">
+            <form method="POST" action="" class="space-y-6" id="phone-form">
+                <div>
+                    <label for="phone" class="block text-sm font-semibold text-gray-700">Phone Number</label>
+                    <input type="text" name="phone" id="phone" placeholder="Enter phone number (e.g., 923001234567 or 447955604663)" class="input-field mt-2 block w-full px-4 py-3 border border-gray-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-gray-50" required>
+                    <p id="phone-error" class="error-message mt-2">Please enter a valid phone number (10&ndash;15 digits, no + or other characters).</p>
+                </div>
+                <button type="submit" class="btn-submit w-full bg-gradient-to-r from-blue-600 to-blue-800 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-blue-900 transition-all duration-300 transform hover:scale-105 disabled:opacity-60 disabled:cursor-not-allowed" id="submit-btn" disabled>Fetch Profile Picture</button>
+            </form>
+
+                    </div>
+
+        <div class="mt-12 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+            <a href="https://whatsapp.com/channel/0029ValH0yv6GcG8pM6AN432" target="_blank" class="btn-whatsapp bg-green-500 text-white py-3 px-8 rounded-full font-semibold hover:bg-green-600 flex items-center justify-center">
+                <svg class="w-6 h-6 mr-2" fill="currentColor" viewbox="0 0 24 24">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.074-.149-.669-.816-.911-1.115-.241-.297-.436-.149-.582-.149-.146 0-.348 0-.669.05-.297.05-.572.247-.67.496-.099.248-.396.967-.692 1.664-.297.697-.568 1.416-.669 1.664-.099.248-.223.496-.397.744-.173.247-.396.595-.644.842-.248.247-.495.446-.742.595-.248.149-.52.149-.669.05-.149-.149-.669-.645-1.115-1.164-.446-.52-.86-1.113-1.164-1.362-.297-.248-.595-.52-.892-.744-.099-.074-.198-.223-.297-.446-.099-.223-.099-.446 0-.669.099-.223.397-.868.892-2.059.396-.992.595-1.835.595-2.58 0-.744-.347-1.39-.842-1.885-.495-.495-1.139-.744-1.885-.744-.248 0-.495 0-.744.05-.248.05-.842.347-1.29.842-.446.495-.744 1.139-.744 1.885 0 .744.297 1.487.842 2.133.545.645 1.19 1.339 1.984 2.133 1.983 1.984 4.362 3.373 7.236 4.113.694.198 1.388.297 2.033.297.645 0 1.29-.099 1.834-.297.545-.198 1.091-.495 1.487-.842.396-.347.694-.744.892-1.189.198-.446.297-.892.297-1.339 0-.248-.05-.495-.149-.744zm-5.452 7.618A11.665 11.665 0 0112 2a11.665 11.665 0 01-9.916 17.8l-1.983 1.983a.75.75 0 00.531 1.281h1.983A11.665 11.665 0 0112 22z"></path>
+                </svg>
+                Join our WhatsApp Channel
+            </a>
+            <a href="https://t.me/shadowinnovations" target="_blank" class="btn-telegram bg-blue-500 text-white py-3 px-8 rounded-full font-semibold hover:bg-blue-600 flex items-center justify-center">
+                <svg class="w-6 h-6 mr-2" fill="currentColor" viewbox="0 0 24 24">
+                    <path d="M22.46 2.57a1.12 1.12 0 00-1.15-.36l-18 6.75a1.12 1.12 0 00-.08 2.07l8.25 3.3 3.3 8.25a1.12 1.12 0 002.07-.08l6.75-18a1.12 1.12 0 00-.36-1.15zm-3.53 6.53l-6.45 6.45-2.25-5.63 5.63-2.25 3.07 1.43z"></path>
+                </svg>
+                Join our Telegram Channel
+            </a>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p class="text-sm">Developed by <span class="font-semibold">Shadow Innovations</span></p>
+        </div>
+    </footer>
+
+    <script>
+        const phoneInput = document.getElementById('phone');
+        const phoneError = document.getElementById('phone-error');
+        const submitBtn = document.getElementById('submit-btn');
+
+        phoneInput.addEventListener('input', function () {
+            const value = phoneInput.value.trim();
+            // Allow only digits
+            const isValid = /^[0-9]{0,15}$/.test(value);
+            const isLengthValid = value.length >= 10 && value.length <= 15;
+
+            if (value === '' || !isValid || !isLengthValid) {
+                phoneError.classList.add('show');
+                submitBtn.disabled = true;
+            } else {
+                phoneError.classList.remove('show');
+                submitBtn.disabled = false;
+            }
+        });
+
+        // Clean input before form submission
+        document.getElementById('phone-form').addEventListener('submit', function (e) {
+            let phoneValue = phoneInput.value.trim();
+            // Remove any non-digits
+            phoneValue = phoneValue.replace(/[^0-9]/g, '');
+            phoneInput.value = phoneValue;
+        });
+
+        // Download image function
+        function downloadImage(base64Data, phoneNumber) {
+            const link = document.createElement('a');
+            link.href = 'data:image/jpeg;base64,' + base64Data;
+            link.download = 'whatsapp_dp_' + phoneNumber + '.jpg';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>
